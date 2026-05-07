@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spilcafeen spiloversigt</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="shortcut icon" href="img/SC-logo-2023-transparant-BG+Small+Crop.webp" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+      <h1>Spiloversigt</h1>
+      <img class="logo" src="img/SC-logo-2023-transparant-BG+Small+Crop.webp" alt="spilcafeen_logo" width="80px" >
+      <p class="subtitle">Gå på opdagelse i vores store udvalg af brætspil!</p>
+    </header>
+
+    <main>
+      <section class="controls">
+        <div class="control-group">
+          <label for="search-input">Søg på titel</label>
+          <input type="text" id="search-input" placeholder="Fx brætspil" />
+        </div>
+
+        <div class="control-group">
+          <label for="genre-select">Genre</label>
+          <select id="genre-select">
+            <option value="all">Alle genrer</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sort-select">Sortering</label>
+          <select id="sort-select">
+            <option value="none">Ingen sortering</option>
+            <option value="title">Titel (A-Å)</option>
+            <option value="year">Årstal (nyeste først)</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="status-bar">
+        <p id="game-count">Viser 0 spil</p>
+      </section>
+
+      <section id="game-list" class="game-grid">
+        <p class="loading">Loader spil...</p>
+      </section>
+    </main>
+
+    <dialog id="game-dialog">
+      <form method="dialog">
+        <button id="close-dialog" aria-label="Luk">✕</button>
+        <div id="dialog-content">
+         
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+</body>
+</html>
