@@ -1,36 +1,73 @@
+<!-- Fortæller browseren at dokumentet er HTML5 -->
 <!DOCTYPE html>
+
+<!-- Starter HTML-dokumentet og fortæller at sproget er engelsk -->
 <html lang="en">
+
 <head>
+    <!-- Gør at siden kan vise æ, ø, å og andre tegn korrekt -->
     <meta charset="UTF-8">
+
+    <!-- Gør siden responsiv, så den fungerer på mobil og desktop -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titlen der vises i browserfanen -->
     <title>Spilcafeen spiloversigt</title>
+
+    <!-- Linker til CSS-filen, som styrer sidens udseende -->
     <link rel="stylesheet" href="app.css">
+
+    <!-- Lille ikon i browserfanen -->
     <link rel="shortcut icon" href="img/SC-logo-2023-transparant-BG+Small+Crop.webp" type="image/x-icon">
 </head>
+
 <body>
     
+    <!-- Header er toppen af siden -->
     <header>
+      <!-- Sidens hovedoverskrift -->
       <h1>Spiloversigt</h1>
-      <img class="logo" src="img/SC-logo-2023-transparant-BG+Small+Crop.webp" alt="spilcafeen_logo" width="80px" >
+
+      <!-- Logo billede -->
+      <img class="logo" src="img/SC-logo-2023-transparant-BG+Small+Crop.webp" alt="spilcafeen_logo" width="80px">
+
+      <!-- Kort beskrivelse under overskriften -->
       <p class="subtitle">Gå på opdagelse i vores store udvalg af brætspil!</p>
     </header>
 
+    <!-- Main indeholder hovedindholdet på siden -->
     <main>
+
+      <!-- Section med søgning, genre-filter og sortering -->
       <section class="controls">
+
+        <!-- Gruppe til søgefelt -->
         <div class="control-group">
+          <!-- Label forklarer hvad inputfeltet bruges til -->
           <label for="search-input">Søg på titel</label>
+
+          <!-- Inputfelt hvor brugeren kan søge efter spil -->
           <input type="text" id="search-input" placeholder="Fx brætspil" />
         </div>
 
+        <!-- Gruppe til genre-filter -->
         <div class="control-group">
+          <!-- Label til genre dropdown -->
           <label for="genre-select">Genre</label>
+
+          <!-- Dropdown hvor brugeren kan vælge genre -->
           <select id="genre-select">
+            <!-- Standardvalg der viser alle genrer -->
             <option value="all">Alle genrer</option>
           </select>
         </div>
 
+        <!-- Gruppe til sortering -->
         <div class="control-group">
+          <!-- Label til sortering dropdown -->
           <label for="sort-select">Sortering</label>
+
+          <!-- Dropdown hvor brugeren kan vælge sortering -->
           <select id="sort-select">
             <option value="none">Ingen sortering</option>
             <option value="title">Titel (A-Å)</option>
@@ -39,24 +76,36 @@
         </div>
       </section>
 
+      <!-- Statusbar viser hvor mange spil der vises -->
       <section class="status-bar">
+        <!-- JavaScript ændrer denne tekst dynamisk -->
         <p id="game-count">Viser 0 spil</p>
       </section>
 
+      <!-- Her bliver spilkortene indsat med JavaScript -->
       <section id="game-list" class="game-grid">
+        <!-- Vises mens spillene loader -->
         <p class="loading">Loader spil...</p>
       </section>
     </main>
 
+    <!-- Dialog er en popup/modal til detaljer om et spil -->
     <dialog id="game-dialog">
+
+      <!-- Form med method dialog gør det muligt at lukke dialogen -->
       <form method="dialog">
+
+        <!-- Knap til at lukke popup -->
         <button id="close-dialog" aria-label="Luk">✕</button>
+
+        <!-- Her indsætter JavaScript information om det valgte spil -->
         <div id="dialog-content">
          
         </div>
       </form>
     </dialog>
 
+    <!-- Linker til JavaScript-filen nederst, så HTML indlæses først -->
     <script src="app.js"></script>
 </body>
 </html>
