@@ -332,7 +332,9 @@ header p {
 }
 
 .description {
-  margin-top: 20px;
+  background: rgba(0,0,0,0.03);
+  padding: 16px;
+  border-radius: var(--radius-large);
   line-height: 1.6;
 }
 
@@ -376,6 +378,11 @@ header p {
   text-decoration: none;
   font-weight: 500;
   margin: 16px 0;
+}
+
+/* Hover-effekt på Spilleregler-knap */
+.rules-btn:hover {
+  background: var(--primary-color);
 }
 
 /* Sørg for at dialogen er relativ, så X-knappen kan placeres absolut */

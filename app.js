@@ -265,15 +265,20 @@ function showGameDialog(game) {
     Spilleregler
   </a>
 
+  <div class="description">
+    <p>${game.description}</p>
+  </div>
+
 </div>
 
 <div class="popup-right">
 
   <h2>${game.title}</h2>
 
-<!-- Information -->
+<!-- Beskrivelse -->
 <div class="game-details">
 
+<!-- Informationer -->
   <div class="detail-card">
     <strong>Genre</strong>
     <span>${genres}</span>
@@ -319,10 +324,6 @@ function showGameDialog(game) {
     <span>${game.shelf}</span>
   </div>
 
-</div>
-
-<div class="description">
-  <p>${game.description}</p>
 </div>
   `;
 
