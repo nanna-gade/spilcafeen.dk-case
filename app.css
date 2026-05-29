@@ -52,9 +52,10 @@ header {
   font-family: var(--font-main);
   text-align: center;
   padding: 2rem;
-  background: var(--primary-color);
   box-shadow: none;
   border-top: 2px solid rgba(0, 0, 0, 0.01);
+  color: var(--white);
+  padding: var(--spacing-large);
 }
 
 header h1 {
@@ -62,10 +63,12 @@ header h1 {
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: var(--spacing-small);
+  color: var(--primary-color);
 }
 
 header p {
   font-size: var(--font-size-small);
+  color: var(--text-color);
 }
 
 .logo {
@@ -81,7 +84,7 @@ header p {
   justify-content: center;
   gap: var(--spacing-medium);
   background: var(--background-color);
-  box-shadow: var(--shadow-small);
+  box-shadow: none;
   padding: var(--spacing-large);
 }
 
