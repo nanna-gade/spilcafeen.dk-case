@@ -246,7 +246,7 @@ header p {
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-  /*INDHOLD*/ 
+  /*INDHOLD pop up */ 
 #dialog-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -405,12 +405,6 @@ header p {
   margin-bottom: 4px;
 }
 
-
-
-
-/* RESPONSIVT DESIGN */
-@media only screen and (max-width: 600px) {...}
-
 /* Responsivt flex-box til navbar */
 @media (max-width: 600px) {
   .controls {
@@ -419,4 +413,5 @@ header p {
   .logo {
     display: none;
   }
+
 }
