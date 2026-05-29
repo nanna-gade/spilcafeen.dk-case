@@ -80,7 +80,8 @@ header p {
   display: flex;
   justify-content: center;
   gap: var(--spacing-medium);
-  background: var(--primary-color);
+  background: var(--background-color);
+  box-shadow: var(--shadow-small);
   padding: var(--spacing-large);
 }
 
@@ -93,27 +94,29 @@ header p {
   padding: var(--spacing-small) var(--spacing-medium);
 }
 .control-group label {
-  font-size: 11px;
+  font-size: var(--font-size-small);
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgba(255,255,255,0.8);
+  color: var(--text-color);
   text-transform: uppercase;
 }
 .control-group input {
   width: 180px;
   height: 42px;
   padding: 0 12px;
-  border: none;
-  outline: none;
+  min-width: 150px;
+  background: var(--white);
+  color: var(--text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-large);
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+  outline: none;
+  font-family: var(--font-main);
   font-size: var(--font-size-small);
   transition: all 0.2s ease;
 }
 
 .control-group input::placeholder {
-  color: rgba(255,255,255,0.7);
+  color: rgba(41, 40, 39, 0.5);
   text-transform: lowercase;
   font-family: var(--font-main);
   font-size: var(--font-size-small);
@@ -124,20 +127,23 @@ header p {
   width: 180px;
   height: 42px;
   padding: 0 12px;
-  border: none;
-  outline: none;
+  min-width: 150px;
+  background: var(--white);
+  color: var(--text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: var(--radius-large);
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
+  outline: none;
+  font-family: var(--font-main);
   font-size: var(--font-size-small);
-  transition: all 0.2s ease;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
+
  /* Hover effekt ved Søg, Genre, Sortering */
 .control-group input:focus,
 .control-group select:focus {
-  background: rgba(255,255,255,0.25);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(191, 23, 28, 0.15);
 }
 
 /* STATUS-BAR */
