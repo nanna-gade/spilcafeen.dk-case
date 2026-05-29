@@ -296,7 +296,7 @@ header p {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #ad3421;
+  background: var(--primary-color);
   color: white;
   border: 2px solid white; /* Giver den lidt kontrast */
   border-radius: 50%;
@@ -313,23 +313,23 @@ header p {
 
 #close-dialog:hover {
   transform: scale(1.1);
-  background: #8e2a1b;
+  background: var(--primary-color);
 }
 
 /* Like-hjerte styling */
 .like-button {
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
-  color: #ccc; /* Grå som standard */
-  transition: color 0.3s, transform 0.2s;
+  color: rgba(41,40,39,0.5);
+  transition: 0.2s;
   display: block;
   margin: 10px auto;
 }
 
+
 .like-button.liked {
-  color: #ad3421; /* Rød når der er liket */
+  color: var(--primary-color); /* Rød når der er liket */
 }
 
 .like-button:active {

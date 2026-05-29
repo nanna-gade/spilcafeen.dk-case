@@ -253,7 +253,9 @@ function showGameDialog(game) {
     <h2>${game.title}</h2>
     
     <!-- Like knap -->
-    <button type="button" class="like-button" id="like-btn" title="Like dette spil">❤</button>
+<button type="button" class="like-button" id="like-btn" title="Gem dette spil">
+  <i class="fa-regular fa-bookmark"></i>
+</button>
 
     <!-- Billede -->
     <img src="${game.image}" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom:10px; border-radius: 8px;" />
@@ -281,16 +283,20 @@ function showGameDialog(game) {
   const likeBtn = content.querySelector("#like-btn");
 
   // Når man klikker
-  likeBtn.addEventListener("click", () => {
+likeBtn.addEventListener("click", () => {
 
-    // Tilføjer/fjerner class
-    likeBtn.classList.toggle("liked");
-  });
+  const icon = likeBtn.querySelector("i");
 
-  // Åbner popup
-  dialog.showModal();
+  icon.classList.toggle("fa-regular");
+  icon.classList.toggle("fa-solid");
+
+  likeBtn.classList.toggle("liked");
+});
+
+// Åbner popup
+dialog.showModal();
+
 }
-
 
 // ===== LUK DIALOG =====
 
