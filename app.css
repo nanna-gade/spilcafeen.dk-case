@@ -229,7 +229,7 @@ header p {
 #game-dialog {
   border: none;
   padding: 0;
-  border-radius: 12px;
+  border-radius: var(--radius-large);
 
   /* STØRRELSE*/ 
   width: 95%; /* Gør boksen bredere - 800px er ofte det "søde punkt" for tekst og billeder */
@@ -244,7 +244,7 @@ header p {
 
   /*LAYOUT*/ 
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
   /*INDHOLD*/ 
 #dialog-content {
@@ -253,7 +253,7 @@ header p {
   gap: 24px;
   padding: 2rem;
   align-items: start;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* Gør billedet lidt mindre indeni, så teksten kan rykke op */
@@ -268,27 +268,15 @@ header p {
 
 /* Styling af overskriften i dialogen */
 #dialog-content h2 {
+  color: var(--primary-color);
   font-size: 2rem;
-  margin: 0 0 0.35rem 0;
-  color: #ad3421;
-  text-align: center;
-  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: left;
 }
 /* Afstand mellem tekst-elementer */
 #dialog-content p {
   margin: 0 0 0.5rem 0;
-}
-
-/* En lille detalje: Gør scrollbaren pænere (virker i Chrome/Edge/Safari) */
-#dialog-content::-webkit-scrollbar {
-  width: 8px;
-}
-#dialog-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-#dialog-content::-webkit-scrollbar-thumb {
-  background: #ad3421;
-  border-radius: 10px;
 }
 
 /* Styling af lukkeknappen (X) */
