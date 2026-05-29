@@ -250,31 +250,80 @@ function showGameDialog(game) {
 
   // Dynamisk HTML i popup
   content.innerHTML = `
-    <h2>${game.title}</h2>
-    
-    <!-- Like knap -->
-<button type="button" class="like-button" id="like-btn" title="Gem dette spil">
-  <i class="fa-regular fa-bookmark"></i>
-</button>
+<div class="popup-left">
 
-    <!-- Billede -->
-    <img src="${game.image}" style="width:100%; max-height: 300px; object-fit: contain; margin-bottom:10px; border-radius: 8px;" />
+  <!-- Billede -->
+  <img src="${game.image}" style="width:100%; max-height:300px; object-fit:contain; border-radius:8px;" />
 
-    <!-- Information -->
-    <div class="game-details">
+  <!-- Like knap -->
+  <button type="button" class="like-button" id="like-btn" title="Gem dette spil">
+    <i class="fa-regular fa-bookmark"></i>
+  </button>
 
-        <p><strong>Genre:</strong> ${genres}</p>
-        <p><strong>Spillere:</strong> ${players}</p>
-        <p><strong>Alder:</strong> ${game.age}+</p>
-        <p><strong>Spilletid:</strong> ${game.playtime} min</p>
-        <p><strong>Sprog:</strong> ${game.language}</p>
-        <p><strong>Sværhedsgrad:</strong> ${game.difficulty}</p>
-        <p><strong>Rating:</strong> ${game.rating}</p>
-        <p><strong>Lokation:</strong> ${game.location}</p>
-        <p><strong>Hylde:</strong> ${game.shelf}</p>
-        <p><strong>Beskrivelse:</strong> ${game.description}</p>
+  <!-- Spilleregler -->
+  <a href="#" class="rules-btn">
+    Spilleregler
+  </a>
 
-    </div>
+</div>
+
+<div class="popup-right">
+
+  <h2>${game.title}</h2>
+
+<!-- Information -->
+<div class="game-details">
+
+  <div class="detail-card">
+    <strong>Genre</strong>
+    <span>${genres}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Spillere</strong>
+    <span>${players}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Alder</strong>
+    <span>${game.age}+</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Spilletid</strong>
+    <span>${game.playtime} min</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Sprog</strong>
+    <span>${game.language}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Sværhedsgrad</strong>
+    <span>${game.difficulty}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Rating</strong>
+    <span>${game.rating}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Lokation</strong>
+    <span>${game.location}</span>
+  </div>
+
+  <div class="detail-card">
+    <strong>Hylde</strong>
+    <span>${game.shelf}</span>
+  </div>
+
+</div>
+
+<div class="description">
+  <p>${game.description}</p>
+</div>
   `;
 
   // ===== LIKE-KNAP =====
