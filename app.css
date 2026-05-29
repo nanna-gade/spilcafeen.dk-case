@@ -154,12 +154,13 @@ header p {
 .status-bar {
   display: flex;
   justify-content: center;
-  padding: 10px;
-  color: #181818;
-  font-size: 12px;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-top: 3px solid rgba(0, 0, 0, 0.01);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-medium);
+}
+
+#game-count {
+  color: rgba(41, 40, 39, 0.7);
+  font-size: var(--font-size-small);
+  font-weight: 500;
 }
 
 /* MAIN */
