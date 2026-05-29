@@ -175,8 +175,8 @@ header p {
 /* Hvert spilkort */
 .game-card {
   background: var(--white);
-  border-radius: var(--radius-small);
-  border: solid 0.5px var(--primary-color);
+  border-radius: var(--radius-large);
+  border: none;
   box-shadow: var(--shadow-small);
   overflow: hidden;
   cursor: pointer;
@@ -184,7 +184,7 @@ header p {
 }
 
 .game-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-large);
 }
 
@@ -197,15 +197,16 @@ header p {
 
 /* Tekst */
 .game-info {
-  padding: var(--spacing-small);
-  color: var(--white);
-  background: var(--primary-color);
+  padding: var(--spacing-medium);
+  background: var(--white);
+  color: var(--text-color);
 }
 
 .game-info h2 {
   font-size: var(--font-size-medium);
   font-weight: 400;
   padding-bottom: var(--spacing-small);
+  color: var(--text-color);
 }
 
 .game-info p {
@@ -222,7 +223,7 @@ header p {
 .genre,
 .players {
   font-size: var(--font-size-small);
-  color: var(--white);
+  color: rgba(41,40,39,0.7);
 }
 
 /* Opdateret styling for at gøre boksen større og mere læsbar */
