@@ -27,6 +27,9 @@
 
   /* TYPOGRAPHY */
   --font-main: "Poppins", sans-serif;
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
 }
 
 * {
@@ -37,39 +40,38 @@
 
 /* BODY */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
   font-weight: 400;
-  background: #f7eee4;
+  background: var(--background-color);
   min-height: 100vh;
-  color: white;
+  color: var(--text-color);
 }
 
 /* HEADER */
 header {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-main);
   text-align: center;
   padding: 2rem;
-  background: #BF171C;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  background: var(--primary-color);
+  box-shadow: none;
   border-top: 2px solid rgba(0, 0, 0, 0.01);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.01);
 }
 
 header h1 {
-  font-size: 24px;
+  font-size: var(--font-size-large);
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: var(--spacing-small);
 }
 
 header p {
-  font-size: 12px;
+  font-size: var(--font-size-small);
 }
 
-.logo{
+.logo {
   position: absolute;
-  left: 4%;
-  top: 40px;
+  left: var(--spacing-large);
+  top: 24px;
 }
 
 /* NAVBAR */
@@ -77,46 +79,59 @@ header p {
 .controls {
   display: flex;
   justify-content: center;
-  background: #9c1418;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.01);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  gap: var(--spacing-medium);
+  background: var(--primary-color);
+  padding: var(--spacing-large);
+  box-shadow: var(--shadow-small);
 }
+
 /* Hver div med sortering */
 .control-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 8px 12px;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
 }
 .control-group label {
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.8);
   text-transform: uppercase;
 }
 .control-group input {
-  background-color: rgba(20, 20, 20, 0.3);
-  border-radius: 10px;
-  padding: 4px;
-  min-width: 150px;
+  width: 180px;
+  height: 42px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  border-radius: var(--radius-large);
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  font-size: var(--font-size-small);
+  transition: all 0.2s ease;
 }
+
 .control-group input::placeholder {
   color: rgba(255, 255, 255, 0.3);
   text-transform: lowercase;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-family: var(--font-main);
+  font-size: var(--font-size-small);
   font-weight: 400;
 }
+
 .control-group select {
-  background-color: rgba(20, 20, 20, 0.3);
-  border-radius: 10px;
-  color: rgba(255, 255, 255, 0.3);
-  text-transform: lowercase;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  padding: 4px;
-  min-width: 150px;
+  width: 180px;
+  height: 42px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  border-radius: var(--radius-large);
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  font-size: var(--font-size-small);
+  transition: all 0.2s ease;
 }
 
 /* STATUS-BAR */
@@ -131,22 +146,21 @@ header p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /* MAIN */
 /* Grid layout */
 .game-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
 }
+
 /* Hvert spilkort */
 .game-card {
-  background: white;
-  border-radius: 10px;
-  border: solid 0.5px #9c1418;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: var(--white);
+  border-radius: var(--radius-small);
+  border: solid 0.5px var(--primary-color);
+  box-shadow: var(--shadow-small);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s;
@@ -154,7 +168,7 @@ header p {
 
 .game-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-large);
 }
 
 /* Billeder mindre og ens */
@@ -166,15 +180,15 @@ header p {
 
 /* Tekst */
 .game-info {
-  padding: 10px;
-  color: white;
-  background: #9c1418;
+  padding: var(--spacing-small);
+  color: var(--white);
+  background: var(--primary-color);
 }
 
 .game-info h2 {
-  font-size: 16px;
+  font-size: var(--font-size-medium);
   font-weight: 400;
-  padding-bottom: 8px;
+  padding-bottom: var(--spacing-small);
 }
 
 .game-info p {
@@ -190,9 +204,10 @@ header p {
 
 .genre,
 .players {
-  font-size: 12px;
-  color: white;
+  font-size: var(--font-size-small);
+  color: var(--white);
 }
+
 /* Opdateret styling for at gøre boksen større og mere læsbar */
 #game-dialog {
   border: none;
@@ -218,13 +233,9 @@ header p {
 #dialog-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 24px;
-
   padding: 2rem;
-
   align-items: start;
-
   color: #333;
 }
 
